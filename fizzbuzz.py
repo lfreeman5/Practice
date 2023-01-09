@@ -1,0 +1,19 @@
+import sys
+print(sys.argv)
+inputLen = int(sys.argv[1])
+answers = []
+
+def fizzMe(num):
+	if (num%3==0) and (num%5==0):
+		return "FizzBuzz"
+	elif (num%3==0):
+		return "Fizz"
+	elif (num%5==0):
+		return "Buzz"
+	else:
+		return str(num)
+
+for x in range(1,inputLen+1):
+	answers.append(fizzMe(x))
+
+print(answers)
